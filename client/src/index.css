@@ -1,0 +1,172 @@
+/* --------For the Landing Page---------  */
+.landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.lhead {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  color: maroon;
+  padding: 5px;
+}
+
+.lpImage {
+  height: 85vh;
+}
+
+.lspan {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.lh3 {
+  color: maroon;
+  margin-bottom: 5px;
+}
+
+.lbutton {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 65px;
+  color: maroon;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-color: maroon;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  outline: none;
+}
+
+.lbutton:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --------For the PostView Page--------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(153, 0, 0);
+  background-color: rgb(230, 230, 230);
+}
+
+.logo {
+  margin: auto 0px;
+}
+
+.cam {
+  margin: auto 0px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.cam:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 230, 230)
+}
+
+.post {
+  width: max-content;
+  border: 1px solid grey;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5px;
+}
+
+.user {
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.location {
+  font-weight: 500;
+}
+
+.date {
+  font-size: small;
+  font-weight: 500;
+}
+
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 5px 0px;
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+#desCss {
+  margin: 0px 0px 5px 0px;
+  font-size: large;
+}
+
+#likeCss {
+  margin: 5px 0px 2px 0px;
+}
+
+/* ...............For form page................ */
+.postForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+.form {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.info1 {
+  margin: 10px 0px;
+}
+
+.cam2 {
+  margin: auto 0px;
+}
+
+.postBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#postBtn {
+  width: max-content;
+}
+
+.wait {
+  font-size:small;
+}
