@@ -3,20 +3,29 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import { Form } from './Form';
-// import axios from 'axios';
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Pagination } from './Pagination';
 
 
 function App() {
 
   const [user, setUser] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(5)
 
   const Fetch = async () => {
     const res = await fetch('https://instaclone-app-node.herokuapp.com/postView')
     const data = await res.json();
     setUser(data);
   }
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = user.slice(indexOfFirstPost, indexOfLastPost)
 
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
 
 
   useEffect(() => {
@@ -35,18 +44,28 @@ function App() {
                 <img className='cam' src='./Images/camera.png' height={'20px'} alt='cam' />
               </Link>
             </header>
-            {user.map((value) => {
-              return (
-                <PostView
-                  author={value.author}
-                  location={value.location}
-                  likes={value.likes}
-                  description={value.description}
-                  img={value.img}
-                  date={value.date}
-                />
-              );
-            })}
+            <div>
+              <div>
+                {currentPosts.map((value) => {
+                  return (
+                    <PostView
+                      author={value.author}
+                      location={value.location}
+                      likes={value.likes}
+                      description={value.description}
+                      img={value.img}
+                      date={value.date}
+                    />
+                  )
+                })}
+              </div>
+              <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={user.length}
+                paginate={paginate} />
+
+            </div>
+
           </div>} />
         <Route path='/form' element={
           <div>
